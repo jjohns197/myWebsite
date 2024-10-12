@@ -14,6 +14,18 @@
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
+    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
+  }
+
+  .content-containerM {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 130vh;           /* Full viewport height */
+    padding: 20px;
+    background-color: #fff;  /* Adjust this if you have a specific background */
+    box-sizing: border-box;
+    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
 
 /* Top Bar Styles */
@@ -88,11 +100,11 @@
     background-color: #1d12ae;
 }
 
-.content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
+.indent {
+    padding-left: 40px; /* Apply to all paragraphs needing indentation */
+}
+
+p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+    text-align: justify;
 }
