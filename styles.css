@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 70vh;           /* Full viewport height */
+    height: 130vh;           /* Full viewport height */
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -127,4 +127,20 @@ p {
     align-self:flex-start;
     width: 100%;
     text-align:left;
+}
+
+.left{
+    text-align:left;
+    width: auto;
+}
+
+.right{
+    text-align:right;
+    width:auto;
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
 }
