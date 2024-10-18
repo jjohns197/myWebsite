@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 285vh;           /* Full viewport height */
+    height: 300vh;           /* Full viewport height */
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -143,4 +143,20 @@ p {
     display: flex;
     justify-content: space-between;
     width:100%;
+}
+
+.large-button {
+    font-size: 20px;
+    padding: 15px 30px;
+    width: 200px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.large-button:hover {
+    background-color: #45a049;
 }
