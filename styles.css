@@ -53,6 +53,18 @@
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
 
+  .content-containerContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 110vh;           /* Full viewport height */
+    padding: 20px;
+    background-color: #fff;  /* Adjust this if you have a specific background */
+    box-sizing: border-box;
+    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
+  }
+
 
 /* Top Bar Styles */
 .top-bar {
