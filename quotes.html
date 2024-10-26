@@ -21,10 +21,90 @@
     </header>
 
     <!-- Main Content -->
-    <div class="content-container">
+    <div class="content-containerQuotes">
         <!-- Your centered content goes here -->
-        <p>This page will store all of my qutoes, it will also be dynamic by updating everytime you reload the page./p>
+        
+            <style>
+        
+                .quote {
+                    
+                    font-size: 18px;
+                }
+        
+                .refresh-button {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .refresh-button:hover {
+                    background-color: #45a049;
+                }
+            </style>
+        
+            <h1>Random Quotes</h1>
+            <br><br>
+            
+            <!-- Where the quotes will be displayed -->
+            <div id="quotes-container"></div>
+        
+            <!-- Button to refresh the quotes -->
+            <button class="refresh-button" onclick="displayQuotes()">Refresh Quotes</button>
+        
+            <script>
+                // Array of quotes
+                const quotes = [
+                    "The only limit to our realization of tomorrow is our doubts of today.",
+                    "The purpose of our lives is to be happy.",
+                    "Life is what happens when you're busy making other plans.",
+                    "Get busy living or get busy dying.",
+                    "You have within you right now, everything you need to deal with whatever the world can throw at you.",
+                    "Believe you can and you're halfway there.",
+                    "Do not let making a living prevent you from making a life.",
+                    "Act as if what you do makes a difference. It does.",
+                    "Success is not how high you have climbed, but how you make a positive difference to the world.",
+                    "Success usually comes to those who are too busy to be looking for it.",
+                    "Don't be afraid to give up the good to go for the great.",
+                    "Your time is limited, don't waste it living someone else's life.",
+                    "The best way to get started is to quit talking and begin doing.",
+                    "If life were predictable it would cease to be life, and be without flavor.",
+                    "If you look at what you have in life, you'll always have more."
+                ];
+        
+                // Function to get 10 random quotes
+                function getRandomQuotes() {
+                    const shuffledQuotes = quotes.sort(() => 0.5 - Math.random()); // Shuffle the quotes array
+                    return shuffledQuotes.slice(0, 10); // Return the first 10 shuffled quotes
+                }
+        
+                // Function to display quotes
+                function displayQuotes() {
+                    const quotesContainer = document.getElementById('quotes-container');
+                    quotesContainer.innerHTML = ''; // Clear previous quotes
+        
+                    const randomQuotes = getRandomQuotes();
+                    randomQuotes.forEach((quote) => {
+                        const quoteElement = document.createElement('p');
+                        quoteElement.className = 'quote';
+                        quoteElement.textContent = quote;
+                        quotesContainer.appendChild(quoteElement);
+                    });
+                }
+        
+                // Display 10 quotes when the page loads
+                window.onload = displayQuotes;
+            </script>
+        
+        </body>
+        </html>
+
     </div>
+
+    
 
     <!-- Sidebar -->
     <div class="container">
@@ -37,11 +117,7 @@
             <a href="comments.html">Comments</a>
         </aside>
 
-        <!-- Main Content -->
-        <div class="content-container">
-            <!-- Your centered content goes here -->
-            <p>This page will store all of my qutoes, it will also be dynamic by updating everytime you reload the page.</p>
-        </div>
+        
     
 
 </body>
