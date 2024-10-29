@@ -77,6 +77,18 @@
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
 
+  .content-containerComments {
+    display: block;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height:150px;           /* Full viewport height */
+    padding: 100px;
+    background-color: #fff;  /* Adjust this if you have a specific background */
+    box-sizing: border-box;
+    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
+   
+  }
+
 
 /* Top Bar Styles */
 .top-bar {

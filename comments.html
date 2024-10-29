@@ -21,9 +21,116 @@
     </header>
 
      <!-- Main Content -->
-     <div class="content-container">
+     <div class="content-containerComments">
         <!-- Your centered content goes here -->
-        <p>This page should hold comments about my page</p>
+        <style>
+    
+            #comment-form {
+                margin-bottom: 20px;
+            }
+    
+            #comment-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+    
+            #comment-form button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            #comment-form button:hover {
+                background-color: #45a049;
+            }
+    
+            #comments-container {
+               
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+    
+            .comment {
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
+
+
+        <br><br><br><br>
+        <h1>Leave a Comment</h1>
+        <br>
+       
+
+        <div id="comment-form">
+            <textarea id="comment-input" rows="5" placeholder="Write your comment here..."></textarea>
+            <button onclick="submitComment()">Submit Comment</button>
+            <button onclick="clearComments()">Clear Comments</button>
+        </div>
+        <br><br>
+        <h2>Comments</h2>
+
+        <div id="comments-container"></div>
+
+        <script>
+            // Load comments from localStorage (if available)
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+    
+            // Function to display comments
+            function displayComments() {
+                const commentsContainer = document.getElementById('comments-container');
+                commentsContainer.innerHTML = ''; // Clear previous comments
+    
+                comments.forEach((comment) => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    commentElement.textContent = comment;
+                    commentsContainer.appendChild(commentElement);
+                });
+            }
+    
+            // Function to submit a new comment
+            function submitComment() {
+                const commentInput = document.getElementById('comment-input');
+                const newComment = commentInput.value.trim();
+    
+                if (newComment) {
+                    comments.push(newComment); // Add new comment to the array
+                    localStorage.setItem('comments', JSON.stringify(comments)); // Save comments to localStorage
+                    displayComments(); // Refresh the comments section
+                    commentInput.value = ''; // Clear the input
+                }
+            }
+
+            // Function to clear all comments
+        function clearComments() {
+            // Clear the comments array
+            comments.length = 0;
+
+            // Clear comments from localStorage
+            localStorage.removeItem('comments');
+
+            // Clear the comments section on the page
+            const commentsContainer = document.getElementById('comments-container');
+            commentsContainer.innerHTML = ''; // Remove all displayed comments
+        }
+    
+            // Display comments on page load
+            window.onload = displayComments;
+        </script>
+
+
     </div>
 
     <!-- Sidebar -->
