@@ -1,44 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="styles.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <!-- Top Bar -->
-    <header class="top-bar">
-        <div class="container2">
-            <!-- Logo or Image -->
-            <img src="sunset.jpeg" alt="Logo" class="logo">
-            
-            <!-- Title Text -->
-            <h1 class="title">My Webpage</h1>
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="container2">
+                <!-- Logo or Image -->
+                <img src="sunset.jpeg" alt="Logo" class="logo">
+                
+                <!-- Title Text -->
+                <h1 class="title">My Webpage</h1>
+            </div>
+        </header>
+
+
+        <style>
+            .home-page {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .dynamic-image {
+                margin: 20px auto;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin: 20px;
+                padding: 0;
+                text-align: left;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
+
+<div class="content-containerHome">
+
+    <div id="react-root"></div>
+
+    <!-- React and ReactDOM scripts -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+
+    <!-- React component inside the <script type="text/babel"> tag -->
+    <script type="text/babel">
+    const HomePage = () => {
+        const [imageIndex, setImageIndex] = React.useState(0);
+        const images = [
+        'https://via.placeholder.com/600x400/FF6347/FFFFFF?text=Dynamic+Image+1',
+        'https://via.placeholder.com/600x400/4682B4/FFFFFF?text=Dynamic+Image+2',
+        'https://via.placeholder.com/600x400/32CD32/FFFFFF?text=Dynamic+Image+3'
+        ];
+
+        // Automatically change the image every 5 seconds
+        React.useEffect(() => {
+        const interval = setInterval(() => {
+            setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 500);
+
+        return () => clearInterval(interval); // Cleanup interval on unmount
+        }, [images.length]);
+
+        return (
+        <div className="home-page">
+            <h1>Welcome to My Website</h1>
+            <div className="dynamic-image">
+            <img src={images[imageIndex]} alt="Dynamic" style={{ width: '600px', height: '400px' }} />
+            </div>
+            <h2>Skills</h2>
+            <ul>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>SQL</li>
+            <li>Database Management</li>
+            </ul>
+            <h2>Interesting Facts About Me</h2>
+            <ul>
+            <li>I got through college by driving for Uber and Lyft!</li>
+            <li>I'm passionate about front-end development and creating user-friendly web applications.</li>
+            <li>I'm currently working on a POS system and mobile app.</li>
+            <li>In my free time, I love learning new tech skills and keeping up with the latest trends.</li>
+            </ul>
         </div>
-    </header>
+        );
+    };
 
+    ReactDOM.render(<HomePage />, document.getElementById('react-root'));
+    </script>
 
-    <!-- Main Content -->
-    <div class="content-container">
-        <!-- Your centered content goes here -->
-        <p>This information is where the home page information should go.</p>
-    </div>
+        
+</div>
 
+        <!-- Sidebar -->
+        <div class="container">
+            <aside class="sidebar">
+                <a href="home.html">Home</a>
+                <a href="myStory.html">My Story</a>
+                <a href="quotes.html">Quotes</a>
+                <a href="contact.html">Contact</a>
+                <a href="resume.html">Resume</a>
+                <a href="comments.html">Comments</a>
+            </aside>
 
-    <!-- Sidebar -->
-    <div class="container">
-        <aside class="sidebar">
-            <a href="home.html">Home</a>
-            <a href="myStory.html">My Story</a>
-            <a href="quotes.html">Quotes</a>
-            <a href="contact.html">Contact</a>
-            <a href="resume.html">Resume</a>
-            <a href="comments.html">Comments</a>
-        </aside>
-
-</body>
-</html>
+    </body>
+    </html>

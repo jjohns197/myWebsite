@@ -17,6 +17,17 @@
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
 
+  .content-containerHome {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 165vh;           /* Full viewport height */
+    padding: 20px;
+    background-color: #fff;  /* Adjust this if you have a specific background */
+    box-sizing: border-box;
+    margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
+  }
+
   /* Content area for the My Story page */
   .content-containerM {
     display: flex;
@@ -81,7 +92,7 @@
     display: block;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height:150px;           /* Full viewport height */
+    height:200vh;           /* Full viewport height */
     padding: 100px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
