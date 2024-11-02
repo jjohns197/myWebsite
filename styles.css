@@ -103,6 +103,10 @@
 
 /* Top Bar Styles */
 .top-bar {
+    background-image: url('topbar_pict.jpeg');
+    background-size: cover; /* Ensure the image covers the entire sidebar */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent the image from repeating */
     background-color: #333;  /* Dark background color */
     color: white;            /* Text color */
     padding: 15px 0;         /* Top and bottom padding */
@@ -126,8 +130,8 @@
 
 /* Logo styling */
 .logo {
-    width: 50px;  /* Adjust to your logo size */
-    height: auto; /* Maintain the logo's aspect ratio */
+    width: 70px;  /* Adjust to your logo size */
+    height: 15vh; /* Maintain the logo's aspect ratio */
 }
 
 /* Title styling */
@@ -148,10 +152,11 @@
 }
 
 .sidebar {
+    
     position: fixed;
     top: 60px;
     z-index: 5;
-    background-color: #333;
+    background-color: #031140;
     color: #e9f5f0;
     width: 250px;
     height: 100vh;

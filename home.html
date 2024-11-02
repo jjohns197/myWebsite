@@ -14,7 +14,7 @@
         <header class="top-bar">
             <div class="container2">
                 <!-- Logo or Image -->
-                <img src="sunset.jpeg" alt="Logo" class="logo">
+                <img src="handhead.JPG" alt="Logo" class="logo">
                 
                 <!-- Title Text -->
                 <h1 class="title">My Webpage</h1>
@@ -58,16 +58,16 @@
     const HomePage = () => {
         const [imageIndex, setImageIndex] = React.useState(0);
         const images = [
-        'https://via.placeholder.com/600x400/FF6347/FFFFFF?text=Dynamic+Image+1',
-        'https://via.placeholder.com/600x400/4682B4/FFFFFF?text=Dynamic+Image+2',
-        'https://via.placeholder.com/600x400/32CD32/FFFFFF?text=Dynamic+Image+3'
+        './images/handhead.JPG',  
+        './images/anotherYear.jpeg',
+          './images/aacc.jpeg'
         ];
 
         // Automatically change the image every 5 seconds
         React.useEffect(() => {
         const interval = setInterval(() => {
             setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 500);
+        }, 3500);
 
         return () => clearInterval(interval); // Cleanup interval on unmount
         }, [images.length]);
@@ -115,6 +115,6 @@
                 <a href="resume.html">Resume</a>
                 <a href="comments.html">Comments</a>
             </aside>
-
+        </div>
     </body>
     </html>
