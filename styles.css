@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 165vh;           /* Full viewport height */
+    height: 190vh;           /* Full viewport height */
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -69,7 +69,7 @@
     flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 150vh;           /* Full viewport height */
+    height: 220vh;           /* Full viewport height */
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -81,7 +81,7 @@
     flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 110vh;           /* Full viewport height */
+    height: 122vh;           /* Full viewport height */
     padding: 20px;
     background-color: #fff;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -132,6 +132,16 @@
 .logo {
     width: 70px;  /* Adjust to your logo size */
     height: 15vh; /* Maintain the logo's aspect ratio */
+}
+
+.logoContacts {
+    width: 150x;  /* Adjust to your logo size */
+    height: 30vh; /* Maintain the logo's aspect ratio */
+}
+
+.logoMyStory {
+    width: 150x;  /* Adjust to your logo size */
+    height: 30vh; /* Maintain the logo's aspect ratio */
 }
 
 /* Title styling */
@@ -223,4 +233,8 @@ p {
 
 .large-button:hover {
     background-color: #45a049;
+}
+
+.double-spaced {
+    line-height: 2; /* Double spacing for targeted text */
 }
