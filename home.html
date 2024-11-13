@@ -8,7 +8,7 @@
 
     </head>
 
-    <body>
+    <body class="bodyBack">
 
         <!-- Top Bar -->
         <header class="top-bar">
@@ -58,17 +58,16 @@
     const HomePage = () => {
         const [imageIndex, setImageIndex] = React.useState(0);
         const images = [
-        './images/handhead.JPG',  
+        './images/goodVibes.jpg',  
         './images/anotherYear.jpeg',
-          './images/aacc.jpeg',
-          './images/goodVibes.jpg'
+          './images/aacc.jpeg'
         ];
 
         // Automatically change the image every 5 seconds
         React.useEffect(() => {
         const interval = setInterval(() => {
             setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3500);
+        }, 8000);
 
         return () => clearInterval(interval); // Cleanup interval on unmount
         }, [images.length]);
@@ -90,7 +89,7 @@
             <li>MySql</li>
             <li>Python</li>
             <li>C++</li>
-            <li>Spring Boot</li>
+            <li>Microsoft Office</li>
             <li>Front End Development</li>
             <li>Back-end Development</li>
             <li>Full-Stack Development</li>

@@ -23,7 +23,7 @@
     align-items: center;     /* Center vertically */
     height: 190vh;           /* Full viewport height */
     padding: 20px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
@@ -47,7 +47,7 @@
     align-items: center;     /* Center vertically */
     height: 300vh;           /* Full viewport height */
     padding: 20px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
@@ -59,7 +59,7 @@
     align-items: center;     /* Center vertically */
     height: 130vh;           /* Full viewport height */
     padding: 20px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
@@ -71,7 +71,7 @@
     align-items: center;     /* Center vertically */
     height: 220vh;           /* Full viewport height */
     padding: 20px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
@@ -83,7 +83,7 @@
     align-items: center;     /* Center vertically */
     height: 122vh;           /* Full viewport height */
     padding: 20px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
   }
@@ -94,7 +94,7 @@
     align-items: center;     /* Center vertically */
     height:200vh;           /* Full viewport height */
     padding: 100px;
-    background-color: #fff;  /* Adjust this if you have a specific background */
+    background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
     margin-left: 250px; /* To ensure it doesn't overlap with the sidebar */
    
@@ -237,4 +237,22 @@ p {
 
 .double-spaced {
     line-height: 2; /* Double spacing for targeted text */
+}
+
+.bodyBack {
+    background-image: url('backgroundC.jpg');
+    background-size: cover; /* Adjusts the size of the background to cover the whole page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: rgb(240, 230, 230); /* Ensures your text remains black */
+}
+
+.bodyBackQuotes {
+    background-color: rgb(188, 208, 234);
+    background-size: cover; /* Adjusts the size of the background to cover the whole page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: rgb(11, 10, 10); /* Ensures your text remains black */
 }
