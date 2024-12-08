@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* For the main content area */
 .content-container {
     display: flex;
@@ -21,7 +22,7 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 190vh;           /* Full viewport height */
+    height: 200vh;           /* Full viewport height */
     padding: 20px;
     background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
@@ -45,7 +46,7 @@
     flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-    height: 300vh;           /* Full viewport height */
+    height: 310vh;           /* Full viewport height */
     padding: 20px;
     background-color: transparent;  /* Adjust this if you have a specific background */
     box-sizing: border-box;
